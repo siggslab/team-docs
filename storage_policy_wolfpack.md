@@ -45,9 +45,9 @@ cd $GML
 `find . -type f -user zheqia -not -group g_genomic_medicine -print`
 ##### List all Files created by user (e.g., zheqia) that do not have the permissions '-rwxrwxr--' (numeric mode 774) 
 `find . -type f -user zheqia -not -perm 774 -print`
+
 <br>
 
-**Copy and Paste**
 ```
 find . -type d -exec chgrp 34760 {} \;
 find . -type f -exec chgrp 34760 {} \;
