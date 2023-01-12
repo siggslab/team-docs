@@ -1,6 +1,6 @@
 # Storage policy on Garvan's Wolfpack
 
-We have a temporary storage repo on Wolfpack located at `/share/ScratchGeneral/GenomicMedicine`. We're requesting specific permissions for all files and folders in this repo, including full authority for the owner and the group `g_genomic_medicine`, but no access for any other users.
+We have a temporary storage repo on Wolfpack located at `/share/ScratchGeneral/GenomicMedicine`. We want to ensure that the proper access rights are set for all files and directories in this repository, giving the owner and group g_genomic_medicine complete control, while limiting all other users to read-only access.
 <br><br>
 
 ### Permissions
@@ -8,37 +8,44 @@ We have a temporary storage repo on Wolfpack located at `/share/ScratchGeneral/G
 #### Verify Your Group Memberships (e.g. for User zheqia)
 `id zheqia` 
 
-##### Modify the ownership of all directories
-`find /share/ScratchGeneral/GenomicMedicine -type d -exec chgrp 34760 {} \;`
-##### Modify the ownership of all files
-`find /share/ScratchGeneral/GenomicMedicine -type f -exec chgrp 34760 {} \;`
+```
+GML=/share/ScratchGeneral/GenomicMedicine
+cd GML
+```
 
-##### Revoke Read, Write, and Execute Permissions for All Other Users (i.e. members outside the group) on All Directories
-`find /share/ScratchGeneral/GenomicMedicine -type d -exec chmod o-rwx {} \;`
-##### Revoke Read, Write, and Execute Permissions for All Other Users (i.e. members outside the group) on All Files
-`find /share/ScratchGeneral/GenomicMedicine -type f -exec chmod o-rwx {} \;`
+##### Modify the ownership of all directories
+`find . -type d -exec chgrp 34760 {} \;`
+##### Modify the ownership of all files
+`find . -type f -exec chgrp 34760 {} \;`
+
+##### Revoke Write and Execute Permissions for All Other Users (i.e. members outside the group) on All Directories
+`find . -type d -exec chmod o-rwx {} \;`
+`find . -type d -exec chmod o-rwx {} \;`
+##### Revoke Read Write, and Execute Permissions for All Other Users (i.e. members outside the group) on All Files
+`find . -type f -exec chmod o+r {} \;`
+`find . -type d -exec chmod o+r {} \;`
 
 ##### Grant Read, Write, and Execute Permissions for all members of the g_genomic_medicine group on All Directories
-`find /share/ScratchGeneral/GenomicMedicine -type d -exec chmod g+rwx {} \;`
+`find . -type d -exec chmod g+rwx {} \;`
 ##### Grant Read, Write, and Execute Permissions for all members of the g_genomic_medicine group on All Files
-`find /share/ScratchGeneral/GenomicMedicine -type f -exec chmod g+rwx {} \;`
+`find . -type f -exec chmod g+rwx {} \;`
 
 ##### Ensure Full Permissions for the Owner on All Directories
-`find /share/ScratchGeneral/GenomicMedicine -type d -exec chmod u+rwx {} \;`
+`find . -type d -exec chmod u+rwx {} \;`
 ##### Ensure Full Permissions for the Owner on All Files
-`find /share/ScratchGeneral/GenomicMedicine -type f -exec chmod u+rwx {} \;`
+`find . -type f -exec chmod u+rwx {} \;`
 
 #### Verify the Success of Modifying Permissions on All Files and Folders
 
 ##### List all Directories created by the Owner (e.g. zheqia) that are not associated with the group `g_genomic_medicine`
-`find /share/ScratchGeneral/GenomicMedicine -type d -user zheqia -not -group g_genomic_medicine -print`
-##### List all Directories created by user (e.g., zheqia) that do not have the permissions 'drwxrwx---' (numeric mode 770) 
-`find /share/ScratchGeneral/GenomicMedicine -type d -user zheqia -not -perm 770 -print`
+`find . -type d -user zheqia -not -group g_genomic_medicine -print`
+##### List all Directories created by user (e.g., zheqia) that do not have the permissions 'drwxrwxr--' (numeric mode 775) 
+`find . -type d -user zheqia -not -perm 775 -print`
 
 ##### List all Files created by the Owner (e.g. zheqia) that are not associated with the group `g_genomic_medicine`
-`find /share/ScratchGeneral/GenomicMedicine -type f -user zheqia -not -group g_genomic_medicine -print`
-##### List all Files created by user (e.g., zheqia) that do not have the permissions 'drwxrwx---' (numeric mode 770) 
-`find /share/ScratchGeneral/GenomicMedicine -type f -user zheqia -not -perm 770 -print`
+`find . -type f -user zheqia -not -group g_genomic_medicine -print`
+##### List all Files created by user (e.g., zheqia) that do not have the permissions '-rwxrwxr--' (numeric mode 775) 
+`find . -type f -user zheqia -not -perm 775 -print`
 <br><br>
 
 
@@ -47,7 +54,7 @@ Like other high-performance computing centers, Garvan uses a process called 'flu
 <br>
 
 ##### Listing of outdated files (based on Access time)
-`find /share/ScratchGeneral/GenomicMedicine -type f -atime +60 -print`
+`find . -type f -atime +60 -print`
 ##### Updating the Last-Access Time for the following Files
-`find /share/ScratchGeneral/GenomicMedicine -type f -atime +60 -exec touch {} +`
+`find . -type f -atime +60 -exec touch {} +`
  
