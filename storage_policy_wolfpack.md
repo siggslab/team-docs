@@ -1,3 +1,4 @@
+# Storage policy on Garvan's Wolfpack
 ***
 We have a temporary storage repo on Wolfpack located at `/share/ScratchGeneral/GenomicMedicine`. We're requesting specific permissions for all files and folders in this repo, including full authority for the owner and the group `g_genomic_medicine`, but no access for any other users.
 <br><br>
@@ -12,19 +13,19 @@ We have a temporary storage repo on Wolfpack located at `/share/ScratchGeneral/G
 ##### Modify the ownership of all files
 `find /share/ScratchGeneral/GenomicMedicine -type f -exec chgrp 34760 {} \;`
 
-#### Revoke Read, Write, and Execute Permissions for All Other Users (i.e. members outside the group) on All Directories
+##### Revoke Read, Write, and Execute Permissions for All Other Users (i.e. members outside the group) on All Directories
 `find /share/ScratchGeneral/GenomicMedicine -type d -exec chmod o-rwx {} \;`
-#### Revoke Read, Write, and Execute Permissions for All Other Users (i.e. members outside the group) on All Files
+##### Revoke Read, Write, and Execute Permissions for All Other Users (i.e. members outside the group) on All Files
 `find /share/ScratchGeneral/GenomicMedicine -type f -exec chmod o-rwx {} \;`
 
-#### Grant Read, Write, and Execute Permissions for all members of the g_genomic_medicine group on All Directories
+##### Grant Read, Write, and Execute Permissions for all members of the g_genomic_medicine group on All Directories
 `find /share/ScratchGeneral/GenomicMedicine -type d -exec chmod g+rwx {} \;`
-#### Grant Read, Write, and Execute Permissions for all members of the g_genomic_medicine group on All Files
+##### Grant Read, Write, and Execute Permissions for all members of the g_genomic_medicine group on All Files
 `find /share/ScratchGeneral/GenomicMedicine -type f -exec chmod g+rwx {} \;`
 
-#### Ensure Full Permissions for the Owner on All Directories
+##### Ensure Full Permissions for the Owner on All Directories
 `find /share/ScratchGeneral/GenomicMedicine -type d -exec chmod u+rwx {} \;`
-#### Ensure Full Permissions for the Owner on All Files
+##### Ensure Full Permissions for the Owner on All Files
 `find /share/ScratchGeneral/GenomicMedicine -type f -exec chmod u+rwx {} \;`
 
 #### Verify the Success of Modifying Permissions on All Files and Folders
