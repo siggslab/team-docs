@@ -1,6 +1,7 @@
 
 
 We have a tempoperary storage on wolfpack at `/share/ScratchGeneral/GenomicMedicine`. We request specific permissions for all files/folders in this repo (full autority for the owner and the group `g_genomic_medicine`, but no access for all other users). 
+<br><br>
 
 ### Permissions
 
@@ -36,6 +37,7 @@ We have a tempoperary storage on wolfpack at `/share/ScratchGeneral/GenomicMedic
 find /share/ScratchGeneral/GenomicMedicine -type f -user zheqia -not -group g_genomic_medicine -print
 #### Print all files created by zheqia if the permission is not `-rwxrwx---` (numeric mode, 770)
 find /share/ScratchGeneral/GenomicMedicine -type f -user zheqia -not -perm 770 -print
+<br><br>
 
 
 ### Avoid files being deleted
