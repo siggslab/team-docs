@@ -5,7 +5,7 @@ We have a temporary storage repo on Wolfpack located at `/share/ScratchGeneral/G
 
 ### Permissions
 
-#### Verify Your Group Memberships (e.g. for User zheqia)
+##### Verify Your Group Memberships (e.g. for User zheqia)
 ```
 id zheqia
 GML=/share/ScratchGeneral/GenomicMedicine
@@ -38,13 +38,31 @@ cd $GML
 
 ##### List all Directories created by the Owner (e.g. zheqia) that are not associated with the group `g_genomic_medicine`
 `find . -type d -user zheqia -not -group g_genomic_medicine -print`
-##### List all Directories created by user (e.g., zheqia) that do not have the permissions 'drwxrwxr--' (numeric mode 775) 
-`find . -type d -user zheqia -not -perm 775 -print`
+##### List all Directories created by user (e.g., zheqia) that do not have the permissions 'drwxrwxr--' (numeric mode 774) 
+`find . -type d -user zheqia -not -perm 774 -print`
 
 ##### List all Files created by the Owner (e.g. zheqia) that are not associated with the group `g_genomic_medicine`
 `find . -type f -user zheqia -not -group g_genomic_medicine -print`
-##### List all Files created by user (e.g., zheqia) that do not have the permissions '-rwxrwxr--' (numeric mode 775) 
-`find . -type f -user zheqia -not -perm 775 -print`
+##### List all Files created by user (e.g., zheqia) that do not have the permissions '-rwxrwxr--' (numeric mode 774) 
+`find . -type f -user zheqia -not -perm 774 -print`
+<br>
+
+```
+find . -type d -exec chgrp 34760 {} \;
+find . -type f -exec chgrp 34760 {} \;
+find . -type d -exec chmod o-rwx {} \;
+find . -type d -exec chmod o-rwx {} \;
+find . -type f -exec chmod o+r {} \;
+find . -type d -exec chmod o+r {} \;
+find . -type d -exec chmod g+rwx {} \;
+find . -type f -exec chmod g+rwx {} \;
+find . -type d -exec chmod u+rwx {} \;
+find . -type f -exec chmod u+rwx {} \;
+find . -type d -user zheqia -not -group g_genomic_medicine -print
+find . -type d -user zheqia -not -perm 774 -print
+find . -type f -user zheqia -not -group g_genomic_medicine -print
+find . -type f -user zheqia -not -perm 774 -print
+```
 <br><br>
 
 
