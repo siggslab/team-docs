@@ -9,7 +9,7 @@ We have a temporary storage repo on Wolfpack located at `/share/ScratchGeneral/G
 ```
 id zheqia
 GML=/share/ScratchGeneral/GenomicMedicine
-cd GML
+cd $GML
 ```
 
 ##### Modify the ownership of all directories
