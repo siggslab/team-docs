@@ -6,6 +6,6 @@ If anything seems unclear to you, please open an issue. If you have an idea on h
 
 If you need help more urgently, don't hesitate to ask directly on Slack (e.g. in the #general-computing channels).
 
-* \ \ Getting started
-* \ \ Wolfpack cluster guide
-* \ \ Storage policies on Wolfpack
+* Getting started
+* Wolfpack cluster guide
+* Storage policies on Wolfpack
