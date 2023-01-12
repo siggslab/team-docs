@@ -47,6 +47,7 @@ cd $GML
 `find . -type f -user zheqia -not -perm 774 -print`
 <br>
 
+**Copy and Paste**
 ```
 find . -type d -exec chgrp 34760 {} \;
 find . -type f -exec chgrp 34760 {} \;
@@ -63,7 +64,7 @@ find . -type d -user zheqia -not -perm 774 -print
 find . -type f -user zheqia -not -group g_genomic_medicine -print
 find . -type f -user zheqia -not -perm 774 -print
 ```
-<br><br>
+<br>
 
 
 ### Avoid Deletion of your Files
