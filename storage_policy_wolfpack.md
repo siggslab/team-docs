@@ -1,5 +1,5 @@
 # Storage policy on Garvan's Wolfpack
-***
+
 We have a temporary storage repo on Wolfpack located at `/share/ScratchGeneral/GenomicMedicine`. We're requesting specific permissions for all files and folders in this repo, including full authority for the owner and the group `g_genomic_medicine`, but no access for any other users.
 <br><br>
 
