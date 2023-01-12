@@ -1,2 +1,2 @@
-# team-docs
+# Overview
 Documentation and guides when working at GML
