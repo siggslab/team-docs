@@ -6,9 +6,8 @@ We have a temporary storage repo on Wolfpack located at `/share/ScratchGeneral/G
 ### Permissions
 
 #### Verify Your Group Memberships (e.g. for User zheqia)
-`id zheqia` 
-
 ```
+id zheqia
 GML=/share/ScratchGeneral/GenomicMedicine
 cd GML
 ```
