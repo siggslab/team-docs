@@ -20,7 +20,7 @@ cd $GML
 ##### Revoke Write and Execute Permissions for All Other Users (i.e. members outside the group) on All Directories
 `find . -type d -exec chmod o-rwx {} \;`
 `find . -type d -exec chmod o-rwx {} \;`
-##### Revoke Read Write, and Execute Permissions for All Other Users (i.e. members outside the group) on All Files
+##### Revoke Write and Execute Permissions for All Other Users (i.e. members outside the group) on All Files
 `find . -type f -exec chmod o+r {} \;`
 `find . -type d -exec chmod o+r {} \;`
 
