@@ -9,4 +9,4 @@ If you need help more urgently, don't hesitate to ask directly on Slack (e.g. in
 * Getting started
 * Wolfpack cluster guide
 * [Storage policies on Wolfpack](https://github.com/siggslab/team-docs/blob/main/storage_policy_wolfpack.md)
-* [NCI guide](https://github.com/siggslab/team-docs/blob/main/NCI_user_guide.md)
+* [NCI user guide](https://github.com/siggslab/team-docs/blob/main/NCI_user_guide.md)
