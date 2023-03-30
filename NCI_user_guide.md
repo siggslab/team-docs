@@ -8,3 +8,6 @@ To get started with NCI,
 4. Learn to use NCI by checking out the helpful links provided below,
    * [NCI User Guides](https://opus.nci.org.au/display/Help/NCI+Help)
    * [Gadi User Guide](https://opus.nci.org.au/display/Help/Gadi+User+Guide)
+   * [Overview of Gadi](https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi)
+   * [Linux quick reference](https://opus.nci.org.au/display/Help/Linux+Command+Quick+Reference)
+   
