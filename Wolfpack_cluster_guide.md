@@ -1,4 +1,11 @@
+### Log in to Wolfpack/DICE
 
+```
+# Make sure to connect to VPN or ethernet
+ssh USERNAME@@dice01.garvan.unsw.edu.au
+ssh USERNAME@@dice02.garvan.unsw.edu.au
+```
+You will be navigated to your home directory. 
 
 ### Using conda on Wolfpack
 
