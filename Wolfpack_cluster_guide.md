@@ -5,7 +5,7 @@
 ssh USERNAME@@dice01.garvan.unsw.edu.au
 ssh USERNAME@@dice02.garvan.unsw.edu.au
 ```
-You will be navigated to your home directory. 
+You will be navigated to your home directory. <br><br><br>
 
 
 
