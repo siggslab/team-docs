@@ -7,6 +7,6 @@ If anything seems unclear to you, please open an issue. If you have an idea on h
 If you need help more urgently, don't hesitate to ask directly on Slack (e.g. in the #general-computing channels).
 
 * Getting started
-* Wolfpack cluster guide
+* [Wolfpack cluster guide](https://github.com/siggslab/team-docs/blob/main/Wolfpack_cluster_guide.md)
 * [Storage policies on Wolfpack](https://github.com/siggslab/team-docs/blob/main/storage_policy_wolfpack.md)
 * [NCI user guide](https://github.com/siggslab/team-docs/blob/main/NCI_user_guide.md)
