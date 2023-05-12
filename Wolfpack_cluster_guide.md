@@ -1,4 +1,4 @@
-### Log in to Wolfpack/DICE
+### Log in to Wolfpack (DICE)
 
 ```
 # Make sure to connect to VPN or ethernet
