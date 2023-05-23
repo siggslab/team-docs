@@ -1,3 +1,6 @@
+### See here for an introduction the Garvan HPC (Wolfpack)
+https://theheking.github.io/intro-to-command-line-hpc/practical_overview/1_SettingUpOnWolfpack/
+
 ### Log in to Wolfpack (DICE)
 
 ```
