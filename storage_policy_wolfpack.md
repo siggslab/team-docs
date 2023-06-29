@@ -13,16 +13,16 @@ cd $GML
 ```
 
 ##### Modify the ownership of all directories
-`find . -type d -exec chgrp 34760 {} \;`
+`find . -type d -exec chgrp 34760 {} \;`       
 ##### Modify the ownership of all files
 `find . -type f -exec chgrp 34760 {} \;`
 
 ##### Revoke Write and Execute Permissions for All Other Users (i.e. members outside the group) on All Directories
-`find . -type d -exec chmod o-rwx {} \;`
-`find . -type d -exec chmod o-rwx {} \;`
+`find . -type d -exec chmod o-rwx {} \;`     
+`find . -type f -exec chmod o-rwx {} \;`       
 ##### Revoke Write and Execute Permissions for All Other Users (i.e. members outside the group) on All Files
-`find . -type f -exec chmod o+r {} \;`
-`find . -type d -exec chmod o+r {} \;`
+`find . -type d -exec chmod o+r {} \;`      
+`find . -type f -exec chmod o+r {} \;`      
 
 ##### Grant Read, Write, and Execute Permissions for all members of the g_genomic_medicine group on All Directories
 `find . -type d -exec chmod g+rwx {} \;`
