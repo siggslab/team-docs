@@ -52,9 +52,9 @@ cd $GML
 find . -type d -exec chgrp 34760 {} \;
 find . -type f -exec chgrp 34760 {} \;
 find . -type d -exec chmod o-rwx {} \;
-find . -type d -exec chmod o-rwx {} \;
-find . -type f -exec chmod o+r {} \;
+find . -type f -exec chmod o-rwx {} \;
 find . -type d -exec chmod o+r {} \;
+find . -type f -exec chmod o+r {} \;
 find . -type d -exec chmod g+rwx {} \;
 find . -type f -exec chmod g+rwx {} \;
 find . -type d -exec chmod u+rwx {} \;
