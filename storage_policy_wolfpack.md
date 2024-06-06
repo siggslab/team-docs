@@ -21,8 +21,8 @@ cd $GML
 `find . -type d -exec chmod o-rwx {} \;`     
 `find . -type f -exec chmod o-rwx {} \;`       
 ##### Revoke Write and Execute Permissions for All Other Users (i.e. members outside the group) on All Files
-`find . -type d -exec chmod o+r {} \;`      
-`find . -type f -exec chmod o+r {} \;`      
+`find . -type d -exec chmod o+rx {} \;`      
+`find . -type f -exec chmod o+rx {} \;`      
 
 ##### Grant Read, Write, and Execute Permissions for all members of the g_genomic_medicine group on All Directories
 `find . -type d -exec chmod g+rwx {} \;`
@@ -38,13 +38,13 @@ cd $GML
 
 ##### List all Directories created by the Owner (e.g. zheqia) that are not associated with the group `g_genomic_medicine`
 `find . -type d -user zheqia -not -group g_genomic_medicine -print`
-##### List all Directories created by user (e.g., zheqia) that do not have the permissions 'drwxrwxr--' (numeric mode 774) 
-`find . -type d -user zheqia -not -perm 774 -print`
+##### List all Directories created by user (e.g., zheqia) that do not have the permissions 'drwxrwxr-x' (numeric mode 775) 
+`find . -type d -user zheqia -not -perm 775 -print`
 
 ##### List all Files created by the Owner (e.g. zheqia) that are not associated with the group `g_genomic_medicine`
 `find . -type f -user zheqia -not -group g_genomic_medicine -print`
-##### List all Files created by user (e.g., zheqia) that do not have the permissions '-rwxrwxr--' (numeric mode 774) 
-`find . -type f -user zheqia -not -perm 774 -print`
+##### List all Files created by user (e.g., zheqia) that do not have the permissions '-rwxrwxr-x' (numeric mode 775) 
+`find . -type f -user zheqia -not -perm 775 -print`
 
 <br>
 
@@ -53,16 +53,16 @@ find . -type d -exec chgrp 34760 {} \;
 find . -type f -exec chgrp 34760 {} \;
 find . -type d -exec chmod o-rwx {} \;
 find . -type f -exec chmod o-rwx {} \;
-find . -type d -exec chmod o+r {} \;
-find . -type f -exec chmod o+r {} \;
+find . -type d -exec chmod o+rx {} \;
+find . -type f -exec chmod o+rx {} \;
 find . -type d -exec chmod g+rwx {} \;
 find . -type f -exec chmod g+rwx {} \;
 find . -type d -exec chmod u+rwx {} \;
 find . -type f -exec chmod u+rwx {} \;
 find . -type d -user zheqia -not -group g_genomic_medicine -print
-find . -type d -user zheqia -not -perm 774 -print
+find . -type d -user zheqia -not -perm 775 -print
 find . -type f -user zheqia -not -group g_genomic_medicine -print
-find . -type f -user zheqia -not -perm 774 -print
+find . -type f -user zheqia -not -perm 775 -print
 ```
 <br>
 
